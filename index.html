@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/2-yoshinoyama-nara-japan-in-spring-sean-pavone.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            opacity: 0;
+            animation: fadeInBackground 1s forwards; /* Reduced the background fade-in time */
+        }
+
+        @keyframes fadeInBackground {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            padding: 50px 0;
+            z-index: 10;
+            opacity: 0;
+            animation: fadeInContent 1.5s 0.5s forwards; /* Reduced content fade-in time */
+        }
+
+        @keyframes fadeInContent {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 500px;
+            height: 450px;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInCard 1s ease-out forwards; /* Reduced animation time */
+        }
+
+        .card:first-child {
+            animation-delay: 0.5s; /* No delay, so it fades in quickly */
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.5s; /* Both cards fade in together */
+        }
+
+        @keyframes fadeInCard {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .card h1 {
+            font-size: 2.2em;
+            margin: 10px 0;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #e64a19;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" data-aos="fade-up">
+            <img src="https://s.yimg.com/ny/api/res/1.2/jvkzkQLZ51wXmHswNTiktg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2021-07/59a4bc60-f23c-11eb-bf75-c38993010fb7" alt="Thailand">
+            <h1>Travel Guide for Thailand</h1>
+            <p>Discover the beauty of Thailand with tips, tricks, and must-visit destinations.</p>
+            <a href="https://youtu.be/CxuiFNYnEr4?si=J1jpHhlOKSHwp8e1
+" target="_blank">
+                <button>Check Out!!</button>
+            </a>
+        </div>
+        <div class="card" data-aos="fade-right">
+            <img src="https://th.bing.com/th/id/OIP.OzEO4wLo2BO8BHP68518hAHaEK?rs=1&pid=ImgDetMain" alt="Thailand Tips">
+            <h1>Thailand Travel Tips & Tricks</h1>
+            <p>Essential advice to make your Thailand trip smooth and enjoyable.</p>
+            <a href="https://youtu.be/00ZXaXIABMY?si=DoBN0G2JtCnuaWDJ
+" target="_blank">
+                <button>Check Out Now!!</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    </script>
+</body>
+</html>
